@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hey hello all</h1>
+    {{data}}
+    <h1>{{data}}</h1>
+    <p>{{data1}}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                </tr>
+        </thead>
+        <tbody>
+           
+            {% for i in data %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+            </tr>
+            {% endfor %} <!-- it for end for loop -->
+        </tbody>
+     </table>
+
+
+
+<!-- procedures to  pass html page:
+
+ have to add app and import view from app in setting page if u don't do it previously
+ 1. have to create a template folder out of project folder
+ 2. then import os in setting.py
+ 3. add dirs, for that 'DIRS': [os.path.join(BASE_DIR,'templates')]
+ 4. create a html file 
+ 5. go to view and create a function  def index(request):
+                                        return render(request,'index.html') here linking html page
+ 6. go urls and write path for fn
+
+
+context method:
+ it used to pass values using variable to html display page
+steps:
+* have the same procedures of urls pass for html page for link a html page
+then
+1.write a fn in views eg: def fun7(request,c):
+a={'name':'manu','age':22}
+b=c
+return render(request,'index.html',{'data':a,'data1':b}) .here have to pass a and b
+to display html page.it is form of dictionary
+2.write urls path eg:  path('data/<c>',views.fun7)
+3.write dictionary keys in html file.it type in *{{doublecurlybraces}}* for indicate it is a key of dictionary
+template engines -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" id="" placeholder="enter name">
+    <input type="number" name="age" id="" placeholder="enter age">
+    <input type="submit" value="add">
+</form>
+</body>
+</html>
+
