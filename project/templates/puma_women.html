@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+   margin:0px;
+        }
+.navi{
+    height:80px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    position:sticky;
+}
+.logo{
+    flex:1;
+    transform:translate(20px,25px);
+    width:30px;
+   
+}
+.header{
+    flex:9;
+    background-color:black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    color:grey;
+}
+.header ul{
+    display:flex;
+    justify-content:space-evenly;
+    width:100%;
+    align-items:center;
+    list-style-type:none;
+}
+.searchbar{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+position:absolute;
+right:90px;
+top:30px;
+}
+.searchbar input{
+    width:30%;
+    height:20px;
+   
+}
+.searchbar .icon{
+  color:grey;
+  position:relative;
+  right:30px;
+  top:2px;
+}
+.cart{
+    flex:1;
+    color:grey;
+    position:relative;
+    right:-110px;
+    top:30px;
+  }
+ .wish{
+    flex:1;
+    color:grey;
+    position:relative;
+    right:-170px;
+    top:30px;
+  }
+
+.account{
+    flex:1;
+    color:grey;
+    position:relative;
+    left:50px;
+    top:30px;
+}
+.text{
+    height:100px;
+    width:100%;
+    background-color:maroon;
+    color:white;
+    text-align:center;
+    font-weight:300;
+    transform:translate(0px,-20px);
+}
+    .text h3{
+      font-weight:400;
+      transform:translate(0px,10px);
+
+    }
+    .text h4{
+      font-weight:400;
+
+    }
+    .text h5{
+      font-weight:400;
+      transform:translate(0px,-10px);
+
+    }
+
+.btn1 p{
+  height:20px;
+  width:80px;
+  border:1px solid black;
+  padding:10px 10px;
+  transform:translate(20px);
+  text-align:center;
+}
+.btn2 p{
+  height:20px;
+  width:80px;
+  border:1px solid black;
+  padding:10px 10px;
+  transform:translate(1000px,-60px);
+  text-align:center;
+}
+.two{
+  height:80px;
+  width:100%;
+  border:1px solid grey;
+}
+.shoes{
+height:200px;
+width:1000px;
+ background-color:white;
+ display:grid;
+ grid-template-columns:300px 300px 300px 300px;
+ grid-template-rows:300px 300px 300px 300px;
+ gap:20px 30px;
+ transform:translate(20px,100px);
+}
+
+.shoes .s1{
+    flex:1;
+}
+.s1 p{
+    transform:translate(20px,-70px);   
+}
+.s1 h5{
+transform:translate(20px,-370px);  
+background-color:red;
+width:40px;
+} 
+.s1 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s1 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s2{
+    flex:1;
+}
+.s2 p{
+    transform:translate(20px,-70px);   
+}
+.s2 h5{
+transform:translate(20px,-370px);  
+background-color:red;
+width:40px;
+} 
+.s2 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s2 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s3{
+    flex:1;
+}
+.s3 p{
+    transform:translate(20px,-70px);   
+}
+.s3 h5{
+transform:translate(20px,-370px);  
+background-color:red;
+width:40px;
+} 
+.s3 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s3 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s4{
+    flex:1;
+}
+.s4 p{
+    transform:translate(20px,-70px);   
+}
+.s4 h5{
+transform:translate(20px,-370px);  
+background-color:red;
+width:40px;
+} 
+.s4 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s4 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s5{
+    flex:1;
+}
+.s5 p{
+    transform:translate(20px,-70px);   
+}
+.s5 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.s5 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s5 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s6{
+    flex:1;
+}
+.s6 p{
+    transform:translate(20px,-70px);   
+}
+.s6 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.s6 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s6 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s7{
+    flex:1;
+}
+.s7 p{
+    transform:translate(20px,-70px);   
+}
+.s7 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.s7 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s7 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+.shoes .s8{
+    flex:1;
+}
+.s8 p{
+    transform:translate(20px,-70px);   
+}
+.s8 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.s8 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.s8 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+
+  
+    .scnd{
+      height:400px;
+      width:100px;
+      display:grid;
+      transform:translate(5px,20px); 
+      gap:40px 30px;
+    }
+    .i1{
+      grid-column-start:1;
+      grid-column-end:2;
+      grid-row-start:1;
+      grid-row-end:2;
+    }
+    .i1 p{
+    transform:translate(20px,-70px);   
+}
+.i1 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.i1 h3{
+    transform:translate(250px,-170px);
+    color:red;
+    } 
+.i1 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        }
+ .i2{
+      grid-column-start:2;
+      grid-column-end:3;
+      grid-row-start:1;
+      grid-row-end:2;
+    }
+    .i2 p{
+    transform:translate(20px,-70px);   
+}
+.i2 h5{
+transform:translate(20px,-360px);  
+background-color:red;
+width:40px;
+} 
+.i2 h3{
+    transform:translate(250px,-150px);
+    color:red;
+    } 
+.i2 h4{
+    transform:translate(250px,-160px);
+    color:grey;
+        } 
+        .i3{
+      grid-column-start:3;
+      grid-column-end:4;
+      grid-row-start:1;
+      grid-row-end:2;
+    }
+    .i3 p{
+    transform:translate(20px,-70px);   
+}
+.i3 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.i3 h3{
+    transform:translate(250px,-120px);
+    color:red;
+    } 
+.i3 h4{
+    transform:translate(250px,-140px);
+    color:grey;
+        } 
+         .i4{
+      grid-column-start:4;
+      grid-column-end:5;
+      grid-row-start:1;
+      grid-row-end:2;
+    }
+    .i4 p{
+    transform:translate(20px,-70px);   
+}
+.i4 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.i4 h3{
+    transform:translate(250px,-130px);
+    color:red;
+    } 
+.i4 h4{
+    transform:translate(250px,-150px);
+    color:grey;
+        } 
+        .i5{
+      grid-column-start:1;
+      grid-column-end:2;
+      grid-row-start:2;
+      grid-row-end:3;
+      transform:translate(0px,-200px);   
+}
+    .i5 p{
+    transform:translate(20px,-70px);   
+}
+.i5 h5{
+transform:translate(20px,-380px);  
+background-color:red;
+width:40px;
+} 
+.i5 h3{
+    transform:translate(250px,-130px);
+    color:red;
+    } 
+.i5 h4{
+    transform:translate(250px,-140px);
+    color:grey;
+        } 
+        .i6{
+      grid-column-start:2;
+      grid-column-end:3;
+      grid-row-start:2;
+      grid-row-end:3;
+      transform:translate(0px,-200px); 
+    }
+    .i6 p{
+    transform:translate(20px,-70px);   
+}
+.i6 h5{
+transform:translate(20px,-420px);  
+background-color:red;
+width:40px;
+} 
+.i6 h3{
+    transform:translate(250px,-130px);
+    color:red;
+    } 
+.i6 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+        .i7{
+      grid-column-start:3;
+      grid-column-end:4;
+      grid-row-start:2;
+      grid-row-end:3;
+      transform:translate(0px,-200px);
+    }
+    .i7 p{
+    transform:translate(20px,-70px);   
+}
+.i7 h5{
+transform:translate(20px,-420px);  
+background-color:red;
+width:40px;
+} 
+.i7 h3{
+    transform:translate(250px,-130px);
+    color:red;
+    } 
+.i7 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+        .i8{
+      grid-column-start:4;
+      grid-column-end:5;
+      grid-row-start:2;
+      grid-row-end:3;
+      transform:translate(0px,-200px)
+    }
+    .i8 p{
+    transform:translate(20px,-70px);   
+}
+.i8 h5{
+transform:translate(20px,-420px);  
+background-color:red;
+width:40px;
+} 
+.i8 h3{
+    transform:translate(250px,-130px);
+    color:red;
+    } 
+.i8 h4{
+    transform:translate(250px,-180px);
+    color:grey;
+        } 
+
+.first{
+          height:800px;
+          width:1290px;
+          transform:translate(-330px,760px);
+          background-color:rgb(228, 228, 228);
+          /* text-align:center; */
+        }
+        .first h3{
+          transform:translate(10px,000px);
+        }
+        .first p{
+          transform:translate(10px,000px);
+        }
+.next{
+  height:500px;
+  transform:translate(-500px,860px);
+  background-color:rgb(228, 228, 228);
+  line-height:2;
+  width:300px;
+
+}
+.third{
+  height:500px;
+  transform:translate(-300px,860px);
+  background-color:rgb(228, 228, 228);
+  line-height:2;
+  width:300px;
+}
+.fourth{
+  height:280px;
+  transform:translate(170px,960px);
+  background-color:rgb(228, 228, 228);
+  line-height:2;
+  width:300px;
+}
+.fifth{
+  height:200px;
+  transform:translate(380px,960px);
+  background-color:rgb(228, 228, 228);
+  line-height:2;
+  width:300px;
+}
+.table-lst{
+    background-color:black;
+    color:white;
+    width:1280px;
+    height:600px;
+    transform:translate(-660px,1260px);
+}
+table th{
+    right:30px;
+} 
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200& /">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200& /">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200& /">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200& /">
+</head>
+<body>
+    <div class="navi">
+        <div class="logo"><image src="data:image/png;base64,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" height="30px" width="30px"></div>
+        <div class="header">
+          <ul>
+          <li>New</li>
+          <li>Women</li>
+          <li>Men</li>
+          <li>kids</li>
+          <li>motorsport</li>
+          <li>collaborations</li>
+          <li>Sports</li>
+          <li>outlet</li>
+          </ul> 
+        </div>
+          <div class="searchbar">
+            <input type="text">
+          <div class="icon">
+              <span class="material-symbols-outlined">
+                search
+                </span>
+            </div>
+          </div>
+          <div class="wish">
+            <span class="material-symbols-outlined">
+              favorite
+              </span>
+          </div>
+          <div class="cart">
+            <span class="material-symbols-outlined">
+              shopping_cart
+              </span>
+          </div>
+          <div class="account">
+            <span class="material-symbols-outlined">
+              person
+              </span>
+          </div>
+          </div>
+          <div class="text">
+            <h3>FLAT 40% OFF | END OF SEASON SALE</h3>
+            <h4><u>FOR HIM</u>  <u>FOR HER</u>  <u>FOR KIDS</u> </h4>
+            <h5>+EXTRA 50% OFF ON ONLINE PAYMENTS</h5>
+            </div>
+
+            <div class="new">
+                <table>
+                    <tr>
+                        <td><a href="puma.html" style="text-decoration:none">HOME</a></td>
+                        <td> . </td>
+                        <td> WOMEN</td>
+                        </tr>
+                        </table>
+                        <h2>WOMEN</h2></div>
+                       <div class="two"> <div class="btn1"><p>FILTERS</p></div>
+                        <div class="btn2"><p>SORT BY</p></div></div>
+                       
+                        <div class="shoes">
+         
+                          <div class="s1"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/401122/01/sv01/fnd/IND/fmt/png/Tori-Pixie-Res-Women's-Sneakers" height="300px" width="300px">
+                           <p>Tori Pixie Res Women's<br>Sneakers</p>
+                           <h5>-40%</h5>
+                           <h3>3,999</h3>
+                           <h4><del>5,999</del></h4>
+                          </div>
+                
+                          <div class="s2"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/401122/02/sv01/fnd/IND/fmt/png/Tori-Pixie-Res-Women's-Sneakers" height="300px" width="300px">
+                            <p>Tori Pixie Res Women's<br>Sneakers</p>
+                            <h5>-40%</h5>
+                           <h3>3,999</h3>
+                           <h4><del>5,999</del></h4>
+                          </div>
+                
+                            <div class="s3"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/386273/01/sv01/fnd/IND/fmt/png/Mayze-Wedge-Women's-Sneakers" height="300px" width="300px">
+                              <p>Mayze Wedge Women's<br>Sneakers</p>
+                              <h5>-40%</h5>
+                              <h3>5,999</h3>
+                              <h4><del>9,999</del></h4>
+                            </div>
+                
+                              <div class="s4"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/381983/46/sv01/fnd/IND/fmt/png/Mayze-Leather-Women's-Sneakers" height="300px" width="300px">
+                                <p>Mayze Leather Women's<br>Sneakers</p>
+                                <h5>-40%</h5>
+                                <h3>4,799</h3>
+                                <h4><del>7,999</del></h4>
+                              </div>
+                
+                                <div class="s5"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/311135/02/sv01/fnd/IND/fmt/png/PUMA-Surgestride-Women's-Training-Shoes" height="300px" width="300px">
+                                  <p>PUMA  Surgestride Women's<br>Training Shoes</p>
+                                  <h5>-50%</h5>
+                                  <h3>3,249</h3>
+                                  <h4><del>6,499</del></h4>
+                                </div>
+                
+                                  <div class="s6"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/311131/01/sv01/fnd/IND/fmt/png/PUMA-Exoteric-Women's-Running-Shoes" height="300px" width="300px">
+                                    <p>PUMA Exoteric Women's<br>Running shoes</p>
+                                    <h5>-48%</h5>
+                                    <h3>2,599</h3>
+                                    <h4><del>4,999</del></h4>
+                                  </div>
+                
+                                    <div class="s7"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/311131/02/sv01/fnd/IND/fmt/png/PUMA-Exoteric-Women's-Running-Shoes" height="300px" width="300px">
+                                      <p>PUMA Exoteric Women's<br> Running Shoes</p>
+                                      <h5>-53%</h5>
+                                      <h3>2,349</h3>
+                                      <h4><del>4,999</del></h4>
+                                    </div>
+                
+                                    <div class="s8">
+                                      <image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/311135/01/sv01/fnd/IND/fmt/png/PUMA-Surgestride-Women's-Training-Shoes" height="300px" width="300px">
+                                      <p>PUMA Surgestride Women's<br>Training Shoes</p>
+                                      <h5>-50%</h5>
+                                      <h3>3,249</h3>
+                                      <h4><del>6,999</del></h4>
+                                    </div>
+                
+                                    <div class="scnd">
+                                      <div class="i1"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/312114/01/sv01/fnd/IND/fmt/png/Softride-Ruby-Better-Women's-Running-Shoes" height="300px" width="300px">
+                                        <p>Softride Ruby Better Women's<br>Running Shoes</p>
+                                        <h5>-30%</h5>
+                                        <h3>4,899</h3>
+                                        <h4><del>6,999</del></h4>
+                                        </div>
+                                      <div class="i2"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/388781/01/sv01/fnd/IND/fmt/png/Silvia-V4-Women's-Slides" height="300px" width="300px">
+                                        <p>Silvia V4 Women's Slides</p>
+                                        <h5>-20%</h5>
+                                        <h3>1,659</h3>
+                                        <h4><del>1,999</del></h4>
+                                      </div>
+
+                                      <div class="i3"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/379994/02/sv01/fnd/IND/fmt/png/Flyer-Runner-Engineered-Knit-Women's-Shoes" height="300px" width="300px">
+                                        <p>Flyer Runner Engineered Knit<br>Women's Sheos</p>
+                                        <h3>2,299</h3>
+                                        <h4><del>5,499</del></h4>
+                                      </div>
+
+                                      <div class="i4"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/311886/02/sv01/fnd/IND/fmt/png/Softride-Sophia-2-Res-Women's-Slip-On-Shoes" height="300px" width="300px">
+                                        <p>Softride Sophia 2 Res Women's<br>Slip-On Shoes</p>
+                                       <h3>4,499</h3>
+                                       <h4><del>5,499</del></h4>
+                                      </div>
+
+                                      <div class="i5"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/399420/01/sv01/fnd/IND/fmt/png/Royalcat-Softride-Lumina-Women's-Flip-Flops" height="300px" width="300px">
+                                        <p>Royalcat Softride Lumina<br>Women's Flip-Flops</p>
+                                        <h3>1,839</h3>
+                                        <h4><del>2,299</del></h4></div>
+
+                                      <div class="i6"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/396711/01/sv01/fnd/IND/fmt/png/Royalcat-Comfort-SOFTRIDE-Women's-Slides" height="300px" width="300px">
+                                        <p>Royalcat Comfort SOFTRIDE<br>Women's Slides</p>
+                                       <h3>2,239</h3>
+                                        <h5>-20%</h5>
+                                        <h4><del>2,799</del></h4>
+                                      </div>
+
+                                      <div class="i7"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/401118/02/sv01/fnd/IND/fmt/png/Court-Classic-Women's-Sneakers" height="300px" width="300px">
+                                        <p>Court Classic Women's<br>sneakers</p>
+                                        <h3>3,299</h3>
+                                        <h5>-40%</h5>
+                                        <h4><del>5,499</del></h4>
+                                      </div>
+
+                                      <div class="i8"><image src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_350,h_350/global/401346/02/sv01/fnd/IND/fmt/png/Carina-2.0-Mid-Women's-Sneakers" height="300px" width="300px">
+                                        <p>Carina 2.0 Mid Women's<br>Sneakers</p>
+                                        <h3>2,999</h3>
+                                        <h5>-41%</h5>
+                                        <h4><del>4,999</del></h4></div>
+                                      </div>
+                                        <div class="first"><h3> PRODUCT STORY</h3>
+                                       <p>Straight from our archives, it's the PUMA Palermo. This classic terrace shoe debuted in the 80's and now, we've brought it back for the fans. With its signature T-toe construction and classic gum sole, this version features a textile upper and suede overlays.</p>
+                                      </div> 
+                                      <div class="next">
+                                        <h3> DETAILS</h3>
+                                        <ul type="disc">
+                                          <li>Regular fit</li>
+                                          <li>Textile Upper</li>
+                                          <li>suede toe,eyestay, and heel overlays</li>
+                                          <li>Mesh lining, suede tongue lining</li>
+                                          <li>lace closure </li>
+                                          <li>Rubber Midsole and outsole</li>
+                                          <li>Suede PUMA Formstrip</li>
+                                          <li>PUMA branding details</li>
+                                        </ul></div> 
+                                        <div class="third"><h3>MATERIAL INFORMATION</h3>
+                                          <ul type="disc">
+                                            <li>Sockliner:100 Textile</li>
+                                            <li>Outsole: 100% Rubber</li>
+                                            <li>Upper :73.04% Leather, 26.96% Textile</li>
+                                            <li>Lining:100% Textile</li>
+                                            </ul></div> 
+
+                                           <div class="fourth"><h3>Manufacturer's Address</h3>
+                                          <ul type="none"> 
+                                            <li>VMC Royal Co , Ltd</li>
+                                            <li>VN</li>
+                                            <li>22B Thanh phuoc Hamlet,</li>
+                                            <li>Thanh dien ward,</li>
+                                            <li>Chau Thanh district,</li>
+                                            <li>840000 TAY NINH PROVINCE</li>
+                                            </ul>
+                                            </div>
+
+                                            <div class="fifth"><h3>Country Of Origin</h3>
+                                              <p>Vietnam</p> </div>   
+                                              
+                                              <div class="table-lst">
+                                                <table cellpadding="10px" cellspacing="20px">
+                                                  <tr>
+                                                    <th>SUPPORT</th>
+                                                    <td></td>
+                                                    <th>ABOUT</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Contact us</td>
+                                                      <td>FAQs</td>
+                                                      <td>Company</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>promotions & sale</td>
+                                                        <td>My account</td>
+                                                        <td>Corporate News</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>Track order</td>
+                                                        <td>Exchange & return policy</td>
+                                                        <td>Press center</td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>Shoe care</td>
+                                                          <td>Privacy Policy</td>
+                                                          <td>Investors</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Tech Glossary</td>
+                                                            <td>Terms & conditions</td>
+                                                            <td>sustainability</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Initiate return/Exchange</td>
+                                                              <td>Sneaker</td>
+                                                              <td>Careers</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Cookie Settings</td>
+                                                                <td></td>
+                                                                <td>Store locator</td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td></td>
+                                                                  <td></td>
+                                                                  <td>PUMA articles</td>
+                                                                </tr>
+                                                                  </table>
+                                                                </div>       
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

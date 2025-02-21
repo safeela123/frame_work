@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <tr>
+            <th>employee details</th>
+        </tr>
+        <tr>
+            <td>employee.id</td>
+            <td><input type="number" name="no" id="" placeholder="enter id" ></td>
+        </tr>
+
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="name" id="" placeholder="enter name" ></td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td><input type="number" name="age" id="" placeholder="enter age" ></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="mail" id="" placeholder="enter email" ></td>
+        </tr>
+        <tr>
+            <td>position</td>
+            <td><input type="text" name="position" id="" placeholder="enter position" ></td>
+        </tr>
+        <tr>
+            <td>year of experience</td>
+            <td><input type="number" name="year" id="" placeholder="enter year" ></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="add"></td>
+        </tr>
+    </form>
+    </table>
+
+    <table border="1">
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>mail</th>
+            <th>position</th>
+            <th>year of experience</th>
+        </thead>
+        <tbody>
+        <tr>
+            {% for i in data1 %}
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.mail}}</td>
+            <td>{{i.position}}</td>
+            <td>{{i.experience}}</td>
+            <td><a href="../update/{{i.id}}">update</a></td>
+            <td><a href="../delete/{{i.id}}" onclick="alert('are you sure to delete this')">delete</a></td>
+        </tr>
+         {% endfor %}
+            
+    
+
+
+           
+
+        </tbody>
+
+    
+</body>
+</html>

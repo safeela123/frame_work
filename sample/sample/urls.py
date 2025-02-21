@@ -29,9 +29,13 @@ urlpatterns = [
     # path('largest/<int:a>/<int:b>/<int:c>',views.fun5),
     # path('',views.fun6),
     # path('data/<c>',views.fun7),
-    # path('data',views.fun8)
+    # path('data',views.fun8),
     # path('data',views.fun9),
-    path('data',views.fun10),
-    # path('data',views.ele_city)
+    # path('data',views.fun10),
+    path('salary',views.salary),
+    path('current',views.ele_city),
+    path('week',views.day),
+    path('scene',views.city),
+     path('div',views.divide)
     
 ]

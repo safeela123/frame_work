@@ -11,25 +11,7 @@
     <h1>{{data}}</h1>
     <p>{{data1}}</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>name</th>
-                <th>age</th>
-                </tr>
-        </thead>
-        <tbody>
-           
-            {% for i in data %}
-            <tr>
-                <td>{{i.name}}</td>
-                <td>{{i.age}}</td>
-            </tr>
-            {% endfor %} <!-- it for end for loop -->
-        </tbody>
-     </table>
-
-
+   
 
 <!-- procedures to  pass html page:
 
@@ -62,6 +44,26 @@ template engines -->
     <input type="number" name="age" id="" placeholder="enter age">
     <input type="submit" value="add">
 </form>
+
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            </tr>
+    </thead>
+    <tbody>
+       
+        {% for i in data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+        </tr>
+        {% endfor %} <!-- it for end for loop -->
+    </tbody>
+ </table>
+
+
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse  # this is importing to write mesage to show in display
+from django.http import HttpResponse  # this is importing to write message to show in display
 
 
 # Create your views here.
@@ -43,7 +43,8 @@ from django.http import HttpResponse  # this is importing to write mesage to sho
 # def fun8(request):
 #     l=[{'name':'manu','age':22},{'name':'anu','age':20},{'name':'vinu','age':30}]
 #     return render(request,'index.html',{'data':l})
-# l=[{'name':'anu','age':33},{'name':'manu','age':23},{'name':'thanu','age':13}]
+
+# l=[{'name':'anu','age':33}]
 # def fun9(request):
 #     if request.method=='POST':
 #         # print(request.POST)
@@ -70,11 +71,72 @@ def fun10(request):
                     blw_30.append({'name':name,'age':age})
                     return redirect(fun10)
     return render(request,'split_table.html',{'data':abv_30,'data1':blw_30})
-    
-# def ele_city(request):
-#         if request.method=='POST':
-#                   value=int(request.POST['unit'])
-#                 if value<=100:
-#                         print("no charge")
-#                         return render(request,'index.html')
-          
+
+def salary(request):
+        p=0
+        if request.method =='POST':
+                value=int(request.POST['amount'])
+                y=int(request.POST['year'])
+                if(y>5):
+                        p=value * 0.05
+                        # return redirect(salary)
+        return render(request,'work.html',{'money':p})
+
+def ele_city(request):
+        b=0
+        if request.method=='POST':
+                value=int(request.POST['current'])
+                if value<=100:
+                        b="no charge"
+                        
+                elif value<=200:
+                        b=(value-100)*5
+
+                else:
+                        b=(value-200)*10+500
+        return render(request,'work.html',{'data':b})
+def day(request):
+        p=0
+        if request.method=='POST':
+                value=int(request.POST['days'])
+                if value==1:
+                        p="monday"
+                        # return HttpResponse("monday")
+                if value==2:
+                        p='tuesday'
+                if value==3:
+                        p="wednesday"
+                if value==4:
+                        p="thersday"
+                if value==5:
+                        p="friday"
+                if value==6:
+                        p="saturday"
+                if value==7:
+                        p="sunday"
+        return render(request,"work.html",{'data':p})
+
+def city(request):
+        a=0
+        if request.method =="POST":
+                p=request.POST['monument']
+                if p=='delhi':
+                        a="red fort"
+                elif p=='agra':
+                        a="taj mahal"
+                elif p=="jaipur":
+                        a="jal mahal"
+                else:
+                        a="not found"
+        return render(request,"work.html",{'data':a})
+
+def divide(request):
+        c=0
+        if request.method =='POST':
+                a=int(request.POST['divisible'])
+                b=(a%10)
+                if b % 3==0:
+                        c='the given number is divisible by 3'
+                else:
+                        c='the given number is not divisible by 3'
+        return render(request,'work.html',{'data':c})

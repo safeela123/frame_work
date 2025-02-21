@@ -6,8 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" plcaholder="enter your eletricity unit" name="unit" id="">
+    <form action="" method="POST">
+    {% csrf_token %}
+    <input type="number" name="amount" id="" placeholder="enter your salary">
+    <input type="number" name="year" id="" placeholder="enter your year of work">
     <input type="submit" value="submit">
-    <h3>{{value}}</h3>
+    </form>
+    {{money}}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="number" name="current" id="" placeholder="enter ur electricity unit">
+        <input type="submit" value="submit">
+    </form>
+    {{data}}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="number" name="days" id="" placeholder="enter any of 1-7">
+        <input type="submit" value="submit">
+    </form>
+    {{data}}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="monument" id="" placeholder="enter your city">
+        <input type="submit" value="submit">
+    </form>
+    {{data}}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="number" id="" name="divisible" placeholder="enter your number">
+        <input type="submit" value="submit">
+    </form>
+    {{data}}
 </body>
 </html>
