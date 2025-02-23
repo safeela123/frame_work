@@ -30,27 +30,16 @@ def update(request,pk):
         email=request.POST['mail']
         cls=int(request.POST['class'])
         subject=request.POST['sub']
-        for i in l:
-            if id==i['id']:
-                i['id']=no
-                i['name']=name
-                i['age']=age
-                i['email']=email
-                i['class']=cls
-                i['subject']=subject
-
+        students.objects.filter(pk=pk).update(ad_no=no,name=name,age=age,mail=email,cls=cls,subject=subject)
    
-                return redirect(management)
+        return redirect(management)
 
     return render(request,'update.html',{'data':data})
 
-def delete(request,id):
-    data2=0
+def delete(request,pk):
+    students.objects.filter(pk=pk).delete()
     
-    for i in l:
-        if id==i['id']:
-            data2=i
-            l.remove(i)
-            return redirect(management)
+  
+    return redirect(management)
 
-    return render(request,'delete.html',{'data':data2})
+ 

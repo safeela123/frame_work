@@ -7,7 +7,7 @@
 </head>
 <body>
     <table>
-        <form action="../update/{{data.id}}" method="POST">
+        <form action="../update/{{data.pk}}" method="POST">
             {% csrf_token %}
             <input type="number" name="no" value="{{data.ad_no}}" id="" placeholder="id">
             <input type="text" name="name" value="{{data.name}}" id="" placeholder="name">
