@@ -5,31 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css2/style.css' %}">
 </head>
 <body>
     <div class="first">
+        <h1>TO DO LIST</h1>
+        <div class="profile">
+            <image src="{% static 'PHOTO/profile.png' %}" height="45px" width="45px" style="border-radius:50%;transform:translate(330px,-60px);border:solid 1px;"></image>
+        </div>
+    <div class="second">
+            <p>Manage<br>your Time<br>Efficiently</p>
+            <image src="{% static 'PHOTO/list.png' %}" height="145x" width="" style="border-radius:25% ;margin-left:200px;margin-top:-99px">
+        </div>
+    <div class="third">
    <form action="" method="POST">
     {% csrf_token %}
-    <input type="text" placeholder="type here" name="type" id="">
-    <input type="submit" value="add">
+    <input type="text" placeholder="type your task here" name="type" id="" class="text">
+    <input type="submit" value=" add to list" class="button">
     </form>
 </div>
-    <table>
-        <thead>
+<div class="output">
+    <h3>Your Schedule</h3>
+    <table cellspacing="10px">
+        <!-- <thead>
             <th>date</th>
-            <th>to do</th>
+            <th>task</th>
         </thead>
-        <tbody>
+        <tbody> -->
             
-            <tr>
+            
+                <tr>
+              
                 {% for i in datas %}
-                <td>{{i.text}}</td>
-                <td><a href="../update/{{i.pk}}">update</a></td>
+                <td style="border-radius:25px;padding:15px;width:90px;border:solid black 2px;">{{i.date}}</td>
+                <td style="border-radius:25px;padding:15px;width:90px;border:solid black 2px;">
+                    {{i.text}}</td>
+                <td><a href="../update/{{i.pk}}">edit</a></td>
                 <td><a href="../delete/{{i.pk}}">delete</a></td>
-            </tr>
+            
+        </tr>
             {% endfor %}
+        
         </tbody>
     </table>
+
 </body>
 </html>

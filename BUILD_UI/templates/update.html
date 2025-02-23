@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>update</title>
+    <link rel="stylesheet" href="{% static 'css2/style2.css'%}">
 </head>
 <body>
+    <div class="first">
+        <h1>TO DO LIST</h1>
+        <div class="profile">
+            <image src="{% static 'PHOTO/profile.png' %}" height="45px" width="45px" style="border-radius:50%;transform:translate(330px,-60px);border:solid 1px;"></image>
+        </div>
+    <div class="second">
+            <p>Manage<br>your Time<br>Efficiently</p>
+            <image src="{% static 'PHOTO/list.png' %}" height="145x" width="" style="border-radius:25% ;margin-left:200px;margin-top:-99px">
+        </div>
+    <div class="third">
+        <h3 style="text-align:center">EDIT TASK</h3>
     <form action="../update/{{data.pk}}" method="post">
     {% csrf_token %}
-    <input type="text" name="text" value="{{data.text}}" placeholder="text" id="">
-    <input type="submit" value="submit">
+    <input type="text" name="date" value="{{data.date}}" placeholder="date" id="" class="date">
+    <input type="text" name="text" value="{{data.text}}" placeholder="text" id="" class="text">
+    <input type="submit" value="submit" class="button">
     </form>
+    </div></div>
 </body>
 </html>
