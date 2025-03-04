@@ -9,13 +9,7 @@
     <table>
         <form action="../delete/{{data.id}}" method="POST">
             {% csrf_token %}
-            <!-- <input type="number" name="no" value="{{data.id}}" id="" placeholder="id">
-            <input type="text" name="name" value="{{data.name}}" id="" placeholder="name">
-            <input type="number" name="age" value="{{data.age}}" id="" placeholder="age">
-            <input type="text" name="mail" value="{{data.email}}" id="" placeholder="email">
-            <input type="number" name="class" value="{{data.class}}" id="" placeholder="class">
-            <input type="text" name="sub" value="{{data.subject}}" id="" placeholder="subject">
-            <input type="submit" value="submit"> -->
+            <p>you deleted {{data}}</p>
         </form>
     </table>
 </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+    <div class="one"><h3>Student Managment</h3></div>
+    <form action="../" method="POST">
+        {% csrf_token %}
+        <select name="dname" id="">
+        <option selected disabled>--select your department--</option>
+        {% for i in dnames %}
+        <option value="{{i.pk}}">{{i.dname}}</option>
+        {% endfor %}
+        </select>
+        <input type="submit" value="search">
+        <a href="../index">add student</a>
+    </form>
+    {% if sts %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Eamil</th>
+            <th>Department</th>
+        </tr>
+
+            {% for i in sts %}
+            <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.dname}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+    {% else%}
+        <p> no students found </p>
+    {% endif %}
+    </div>
+
+</body>
+</html>

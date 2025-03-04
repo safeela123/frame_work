@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+</head>
+<body>
+    <div class="main">
+    <img src="{% static 'image2/veg_background.jpg'%}" height="auto" width="100%" style="border-radius:15px;background-position:center">
+    </div>
+    <div class="passbox">
+    <table > 
+    <form action="../register" method="POST">
+        {% csrf_token %}
+        <tr>
+            <td><h1 class="head">Create Account </h1></td>
+        </tr>
+        <tr>
+            <td class="pass"> <input type="text" placeholder="name" name="uname" id="" required style="color:white;border-radius:25px;width:200px;padding:8px; font-size:12px"></td>
+        </tr>
+        <tr>
+            <td class="pass"><input type="email" name="email" maxlenght="10" placeholder="Email ID" required style="color:white;border-radius:25px;width:200px;padding:8px; font-size:12px">
+        <tr>
+            <td class="pass" ><input type="password" name="password" placeholder="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,}" required style="color:white;border-radius:25px;width:200px;padding:8px">
+            </td>
+        </tr>
+        <tr>
+            <td class="pass" ><input type="password" name="cnf_password" placeholder="confirm password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,}" required style="color:white;border-radius:25px;width:200px;padding:8px">
+            </td>
+                </tr>
+            <tr>
+                <td><input type="submit" value="register"style="background-color:black;border-radius:25px;width:220px;padding:8px;color:white"></td>
+            </tr>
+    </form>
+</body>
+</html>

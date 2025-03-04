@@ -1,0 +1,68 @@
+.main img{
+    /* position:relative;
+    left:200px; */
+    height:96vh;
+    width:100%;
+}
+.passbox{
+    height:370px;
+    width:300px;
+    border:2px solid black;
+    border-radius:15px;
+    text-align:center;
+    transform:translate(530px,-530px);
+    background-color:rgba(255, 255, 255 /10%);
+    box-shadow:0px 0px 20px rgba(0,0,0,0.1);
+    backdrop-filter:blur(10px);
+
+}
+.passbox table{
+    font-size:12px;
+    transform:translate(40px);
+}
+.passbox input{
+   background:transparent;
+   border:2px solid black;
+   backdrop-filter:blur(10px);
+   margin-bottom: 20px;
+}
+.passbox .uname{
+    background-color:transparent;
+    transform:translate(90px,-32px);
+    color:rgba(255, 255, 255, 0.897);
+ 
+}
+.passbox .pass{
+    background:transparent;
+   backdrop-filter:blur(10px);
+   color:black;
+
+}
+   input::placeholder{
+    color:black;
+   }
+.passbox .mail{
+   background-color:transparent;
+    transform:translate(90px,-22px);
+    color:rgba(255, 255, 255, 0.897);
+}
+.lock{
+   background-color:transparent;
+   transform:translate(90px,-22px);
+}
+.head{
+    color:black;
+    font-size:30px;
+    font-weight: 300;
+    font-style: normal;
+}
+.passbox button{
+    border:0;
+}
+button:hover{
+    border:2px solid blueviolet;
+}
+
+.check{
+    accent-color:white;
+}

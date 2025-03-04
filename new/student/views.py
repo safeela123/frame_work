@@ -6,7 +6,6 @@ from django.http import HttpResponse
 l=[]
 
 def management(request):
-    data=0
     if request.method =='POST':
         a=int(request.POST['no'])
         b=request.POST['name']
@@ -23,7 +22,7 @@ def update(request,id):
     for i in l:
         if id==i['id']:
             data=i
-    if request.method=='POST':
+    if request.method=='POST':   #it is for link the input type in html page
         no=int(request.POST['no'])
         name=request.POST['name']
         age=int(request.POST['age'])
@@ -31,7 +30,7 @@ def update(request,id):
         cls=int(request.POST['class'])
         subject=request.POST['sub']
         for i in l:
-            if id==i['id']:
+            if id==i['id']:      # 25 - 40 working for send or add details back in list after updating or editing in update field
                 i['id']=no
                 i['name']=name
                 i['age']=age
@@ -45,15 +44,15 @@ def update(request,id):
     return render(request,'update.html',{'data':data})
 
 def delete(request,id):
-    data2=0
+    # data2=0
     
     for i in l:
-        if id==i['id']:
-            data2=i
+        if id==i['id']:       # if we remove coomented and make comment return redirect then if we delete in browser window
+            # data2=i         #then it show deleted details in delete html page in browser as dictionary
             l.remove(i)
             return redirect(management)
 
-    return render(request,'delete.html',{'data':data2})
+    return render(request,'delete.html')#,{'data':data2})
 
 
 
