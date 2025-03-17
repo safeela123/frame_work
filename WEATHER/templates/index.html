@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/frame_work/WEATHER/static/css/weather_index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="image">
+            <img src="/frame_work/WEATHER/static/images/cloud.png" height="200px" width="230px">
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <td>🌄</td>
+                        <td>sunrise {{data.sunrise}}</td>
+                        </tr>
+                        <tr>
+                            <td>🌇</td>
+                            <td>sunset {{data.sunset}}</td>
+                            </tr>
+                            <tr>
+                            <td>💧</td>
+                            <td>{{data.humidity}}</td>
+                            </tr>
+
+                            </table>
+                            </div>
+
+                            <div class="table1">
+                                <table>
+                                    <tr >
+                                        <td><img src="/frame_work/WEATHER/static/images/location icon.png" height="30px" width="30px"></td>
+                                        <td>{{city_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    <td>{{date and time}}</td>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="/frame_work/WEATHER/static/images/temperature icon.png"></td>
+                                    <td>{{temperature_celsius}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>{{feels_like}}</td></tr>
+                                </table>
+
+                           
+            </div>
+    </div>
+</body>
+</html>

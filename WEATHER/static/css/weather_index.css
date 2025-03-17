@@ -1,0 +1,22 @@
+.image {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:200px;
+    width:200px;
+    background-color:red;
+    position:absolute;
+    top:200px;
+    left:550px;
+}
+.table{
+    position:absolute;
+    top:200px;
+    left:800px;
+    line-height:40px;
+}
+.table1{
+    position:absolute;
+    top:220px;
+    left:230px;
+}

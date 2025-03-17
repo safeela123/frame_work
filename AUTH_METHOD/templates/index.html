@@ -16,12 +16,12 @@
     </div>
     <div class="sub">
     {% if user.is_authenticated %}
-    <h1>Welcome, {{ user.username }}!</h1>
+    <h1>Welcome, {{ userlog.username }}!</h1>
     <h3 style="text-indent:100px">your details are here</h3>
-    <p>First Name: {{ user.first_name }}</p>
-    <p>Email Id: {{user.email}}</p>
-    <p>Date of Join: {{ user.date_joined}}</p>
-    <p>Last Login : {{user.last_login}}</p>
+    <p>First Name: {{ userlog.first_name }}</p>
+    <p>Email Id: {{userlog.email}}</p>
+    <p>Date of Join: {{ userlog.date_joined}}</p>
+    <p>Last Login : {{userlog.last_login}}</p>
     
     <p></p>
    

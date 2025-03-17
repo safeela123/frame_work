@@ -12,7 +12,7 @@ def userReg(request):
             data.save()
             return redirect(userlogin)
         else:
-            print('password doesnt match')
+            print('cant register ')
     return render (request,'register.html')
 
 def userlogin(request):
@@ -22,8 +22,6 @@ def userlogin(request):
         try:
             data=Users.objects.get(psw=psw,uname=uname)
             request.session['user']=uname
-            #
-            request.session['user1']=psw
             return redirect(index)
         except:
             return redirect(userlogin)
@@ -32,7 +30,7 @@ def userlogin(request):
 def index(request):
     if 'user' in request.session:
         print(request.session['user'])
-        user=Users.objects.get(uname=request.session['user'],psw=request.session['user1'])
+        user=Users.objects.get(uname=request.session['user'])
         print(user)
         return render (request,'index.html',{'user':user})
     else:
@@ -43,7 +41,7 @@ def logout(request):
         del request.session['user']
         return redirect(userlogin)
     else:
-        return redirect()
+        return redirect(userlogin)
 
 
 # Create your views here.

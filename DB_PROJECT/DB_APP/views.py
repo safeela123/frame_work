@@ -4,7 +4,7 @@ from .models import *
 
 # Create your views here.
 def management(request):
-    datas=students.objects.all()
+    datas=students.objects.all()  #it for show output in browser page
     # print(datas)
     
     if request.method =='POST':
